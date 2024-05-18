@@ -21,11 +21,11 @@ jobs:
     steps:
       # Generate a snake game from a GitHub user's contributions graph and output a SVG animation
       - name: Generate github-contribution-grid-snake.svg
-        uses: Platane/snk@v2.2.0 # Assuming this version or later uses Node.js 20
+        uses: Platane/snk@v2 # Using the latest version that supports Node.js 20
         with:
-          github_user_name: AyushGenX
-          outputs: dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            
+          github_user_name: AravindaJogi
+          # outputs: This line is removed to avoid the 'split' error
+
       # Push the content of <build_dir> to a branch
       # The content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> or as GitHub Page
       - name: Push github-contribution-grid-snake.svg to the output branch
